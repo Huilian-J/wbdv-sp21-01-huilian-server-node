@@ -1,8 +1,20 @@
 let questions = require('./questions.json')
 
-findQuestionsForQuiz = (quizId) =>
+const createQuestion = () => {}
+const createQuestionForQuiz = () => {}
+const findAllQuestions = () => {}
+const findAllQuestionsById = () => {}
+const findQuestionsForQuiz = (quizId) =>
     questions.filter(question => question.quizId === quizId)
+const updateQuestions = () => {}
+const deleteQuestions = () => {}
 
 module.exports = {
-    findQuestionsForQuiz
+    createQuestion,
+    createQuestionForQuiz,
+    findAllQuestions,
+    findAllQuestionsById,
+    findQuestionsForQuiz,
+    updateQuestions,
+    deleteQuestions
 }
