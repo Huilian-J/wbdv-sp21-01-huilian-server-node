@@ -6,7 +6,8 @@ module.exports = (app) => {
         const quizId = req.params['qid']
         const questions
             = questionService.findQuestionsForQuiz(quizId)
-        res.json(questions)
+        // res.json(questions)
+        res.send(questions)
     }
 
     app.get("/api/quizzes/:qid/questions",
