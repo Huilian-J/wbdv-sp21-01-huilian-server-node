@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://huilian:huilianpass@cluster0.xjied.mongodb.net/whiteboard?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://huilian:huilianpass@cluster0.xjied.mongodb.net/whiteboard?retryWrites=true&w=majority$ssl=true',
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 const session = require('express-session')
