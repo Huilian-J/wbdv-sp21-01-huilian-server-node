@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
+const uri = process.env.MONGODB_URI
+
+
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://huilian:huilianpass@cluster0.xjied.mongodb.net/whiteboard?retryWrites=true&w=majority$ssl=true',
+mongoose.connect(uri,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 const session = require('express-session')
@@ -26,7 +29,7 @@ app.use(function (req, res, next) {
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-require('dotenv').config();
+// require('dotenv').config();
 require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
 require('./controllers/quiz-attempts-controller')(app)
