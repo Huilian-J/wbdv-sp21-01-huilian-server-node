@@ -1,5 +1,17 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/whiteboard',
+    {useNewUrlParser: true, useUnifiedTopology: true});
+
+const session = require('express-session')
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    // cookie: { secure: true }
+}))
 
 //configure CORS
 app.use(function (req, res, next) {
