@@ -6,7 +6,7 @@ const createQuiz = () => {}
 const findAllQuizzes = () => {
     // return quizzes
     // return quizzesModel.find()
-    quizzesDao.findAllQuizzes()
+    return quizzesDao.findAllQuizzes()
 }
 const findQuizById = (quizId) => {
     // return quizzes.find(quiz => quiz._id === quizId)
@@ -14,7 +14,7 @@ const findQuizById = (quizId) => {
     //     .findById(quizId)
     //     .populate("questions")
     //     .exec()
-    quizzesDao.findQuizById(quizId)
+    return quizzesDao.findQuizById(quizId)
 }
 const updateQuiz = () => {}
 const deleteQuiz = () => {}

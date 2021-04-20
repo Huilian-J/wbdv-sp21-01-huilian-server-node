@@ -5,14 +5,14 @@ const questionsDao = require('../daos/questions-dao')
 const createQuestion = () => {}
 const createQuestionForQuiz = () => {}
 const findAllQuestions = () => {
-    questionsDao.findAllQuestions()
+    return questionsDao.findAllQuestions()
 }
 const findQuestionById = (questionId) => {
-    questionsDao.findQuestionById(questionId)
+    return questionsDao.findQuestionById(questionId)
 }
 const findQuestionsForQuiz = (quizId) => {
     // questions.filter(question => question.quizId === quizId)
-    questionsDao.findQuestionsForQuiz(quizId)
+    return questionsDao.findQuestionsForQuiz(quizId)
 }
 const updateQuestions = () => {}
 const deleteQuestions = () => {}
